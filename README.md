@@ -1,12 +1,13 @@
 # lffiutils
 Utilities for generating LuaJIT FFI bindings
 
-## Create system headers
+## Usage
+### Create system headers
 ```sh
 sh mksurrogatehdr.sh $(sh listsyshdrs.sh)
 ```
 
-## Generate bindings
+### Generate bindings
 ```sh
 gcc -Dinclude=#include -I. -Isystem-headers example.c | grep -v '^# [0-9]' > example.h
 ```
