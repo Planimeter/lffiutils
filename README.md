@@ -1,6 +1,16 @@
 # lffiutils
 Utilities for generating LuaJIT FFI bindings
 
+## Create system headers
+```sh
+sh mksurrogatehdr.sh $(sh listsyshdrs.sh)
+```
+
+## Generate bindings
+```sh
+gcc -Dinclude=#include -I. -Isystem-headers example.c | grep -v '^# [0-9]' > example.h
+```
+
 ## References
 1. http://stackoverflow.com/questions/20889460/how-do-i-run-the-preprocessor-on-local-headers-only
 
