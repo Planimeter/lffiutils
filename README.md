@@ -1,6 +1,9 @@
 # lffiutils
 Utilities for generating LuaJIT FFI bindings
 
+## References
+[1] http://stackoverflow.com/questions/20889460/how-do-i-run-the-preprocessor-on-local-headers-only
+
 ## License
 The MIT License
 
