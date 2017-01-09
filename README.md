@@ -9,7 +9,7 @@ sh mksurrogatehdr.sh $(sh listsyshdrs.sh)
 
 ### Generate bindings
 ```sh
-gcc -Dinclude=#include -I. -Isystem-headers example.c | grep -v '^# [0-9]' > example.h
+gcc -E -nostdinc -Dinclude=#include -I. -Isystem-headers example.c | grep -v '^# [0-9]' > example.h
 ```
 
 ## References
